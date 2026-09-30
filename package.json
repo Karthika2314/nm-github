@@ -1,0 +1,19 @@
+{
+  "name": "ai-faq-assistant",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node -e \"fetch('http://127.0.0.1:5000/api/faq/search?q=AI').then(async r=>console.log('HTTP STATUS:',r.status,'\\nRESPONSE:',await r.text())).catch(e=>console.error('TEST ERROR:',e))\""
+  },
+  "dependencies": {
+    "@google/genai": "^2.24.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0"
+  }
+}
